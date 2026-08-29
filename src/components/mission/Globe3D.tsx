@@ -79,7 +79,7 @@ function Earth() {
       <ambientLight intensity={0.34} color="#6d8bbd" />
       <mesh>
         <sphereGeometry args={[1, 96, 64]} />
-        <meshStandardMaterial map={dayMap} color="#ff0000" roughness={0.92} metalness={0.02} />
+        <meshStandardMaterial map={dayMap} roughness={0.92} metalness={0.02} />
       </mesh>
       {showClouds && (
         <mesh ref={cloudRef}>
