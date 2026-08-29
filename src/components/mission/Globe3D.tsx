@@ -76,7 +76,7 @@ function Earth() {
   return (
     <group>
       <directionalLight ref={lightRef} intensity={2.6} color="#fff6e8" />
-      <ambientLight intensity={0.34} color="#6d8bbd" />
+      <ambientLight intensity={0.5} color="#7794c4" />
       <mesh>
         <sphereGeometry args={[1, 96, 64]} />
         <meshStandardMaterial map={dayMap} roughness={0.92} metalness={0.02} />
