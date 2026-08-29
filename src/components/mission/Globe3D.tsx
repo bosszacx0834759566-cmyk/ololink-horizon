@@ -76,7 +76,7 @@ function Earth() {
   return (
     <group>
       <directionalLight ref={lightRef} intensity={2.6} color="#fff6e8" />
-      <ambientLight intensity={0.16} color="#5f7ba8" />
+      <ambientLight intensity={0.34} color="#6d8bbd" />
       <mesh>
         <sphereGeometry args={[1, 96, 64]} />
         <meshStandardMaterial map={dayMap} roughness={0.92} metalness={0.02} />
@@ -87,14 +87,14 @@ function Earth() {
           <meshStandardMaterial
             map={clouds}
             transparent
-            opacity={0.62}
+            opacity={0.5}
             depthWrite={false}
             roughness={1}
           />
         </mesh>
       )}
       {showAtmosphere && (
-        <mesh scale={1.045}>
+        <mesh scale={1.022}>
           <sphereGeometry args={[1, 64, 48]} />
           <shaderMaterial
             transparent
@@ -106,7 +106,7 @@ function Earth() {
               void main(){ vN = normalize(normalMatrix * normal); vec4 mv = modelViewMatrix * vec4(position,1.0); vP = mv.xyz; gl_Position = projectionMatrix * mv; }`}
             fragmentShader={`uniform vec3 uColor; varying vec3 vN; varying vec3 vP;
               void main(){ float f = pow(1.0 - abs(dot(normalize(vN), normalize(-vP))), 3.0);
-              gl_FragColor = vec4(uColor, f * 0.85); }`}
+              gl_FragColor = vec4(uColor, f * 0.55); }`}
           />
         </mesh>
       )}
