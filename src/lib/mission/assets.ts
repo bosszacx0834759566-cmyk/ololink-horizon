@@ -93,7 +93,10 @@ for (let p = 0; p < LEO_PLANES; p++) {
 export const CLUSTERS: Cluster[] = [];
 
 for (let c = 0; c < 50; c++) {
-  const [name, lat, lon] = ANCHORS[c];
+  const anchor = ANCHORS[c]!;
+  const name = anchor[0];
+  const lat = anchor[1];
+  const lon = anchor[2];
   const gsId = `GS-${pad(c + 1)}`;
   const droneId = `Drone-${pad(c + 1)}`;
   const hapsId = `HAPS-${pad(c + 1)}`;
