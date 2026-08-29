@@ -115,6 +115,9 @@ export default function Map2D() {
         }
       }
 
+      ctx.fillStyle = "rgba(4,8,16,0.35)";
+      ctx.fillRect(0, 0, w, h);
+
       // graticule
       ctx.strokeStyle = "rgba(120,170,220,0.12)";
       ctx.lineWidth = 1;

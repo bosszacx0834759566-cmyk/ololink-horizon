@@ -451,7 +451,7 @@ function Scene() {
 export default function Globe3D() {
   return (
     <Canvas
-      camera={{ position: [0, 1.1, 2.6], fov: 42, near: 0.01, far: 100 }}
+      camera={{ position: [2.35, 0.95, 0.6], fov: 42, near: 0.01, far: 100 }}
       dpr={[1, 1.75]}
       gl={{ antialias: true }}
     >
