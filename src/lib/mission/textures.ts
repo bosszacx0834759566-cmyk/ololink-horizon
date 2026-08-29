@@ -15,7 +15,7 @@ function makeNoise(seed: number, size: number) {
   return (x: number, y: number) => {
     const xi = Math.floor(x), yi = Math.floor(y);
     const xf = fade(x - xi), yf = fade(y - yi);
-    const w = (a: number, b: number) => ((a % size) + size) % size;
+    const w = (a: number) => ((a % size) + size) % size;
     const i0 = w(xi), i1 = w(xi + 1), j0 = w(yi), j1 = w(yi + 1);
     const a = g[j0 * size + i0]!, b = g[j0 * size + i1]!;
     const c = g[j1 * size + i0]!, d = g[j1 * size + i1]!;
